@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>The Bathrooms</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="toilet paper.png" />
+  </head>
+  <style>
+    html {
+      perspective: 3000px;
+    }
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: black;
+      perspective: 5000px;
+      overflow: hidden;
+    }
+
+    #tree {
+      position: absolute;
+      width: 5000px;
+      height: 5000px;
+      transform-style: preserve-3d;
+      transform: rotateX(90deg) translateX(-2500px) translateZ(2500px);
+      background-image: url(tile.png);
+      transform-origin: bottom;
+    }
+
+    #universe {
+      position: relative;
+      perspective: 30000px;
+      transform: translateY(-1500px);
+      transform-style: preserve-3d;
+      transform-origin: -2500px 0px -7500px;
+    }
+    #toilet {
+      transform-style: preserve-3d;
+      height: 500px;
+      width: 500px;
+      position: absolute;
+      perspective: 500px;
+    }
+    img {
+      height: 1000px;
+      width: 500px;
+    }
+    #front {
+      filter: saturate(10) invert(80%);
+      height: 500px;
+      width: 500px;
+      transform-style: preserve-3d;
+      position: absolute;
+      transform: translateZ(250px);
+    }
+    #back {
+      filter: saturate(10) invert(40%);
+      height: 500px;
+      width: 500px;
+      transform-style: preserve-3d;
+      position: absolute;
+      transform: translateZ(-250px);
+    }
+    #left {
+      filter: saturate(10) invert(60%);
+      height: 500px;
+      width: 500px;
+      transform-origin: left;
+      transform-style: preserve-3d;
+      position: absolute;
+      transform: rotateY(-90deg) translateX(-250px);
+    }
+    #right {
+      filter: saturate(10) invert(20%);
+      transform-origin: right;
+      height: 500px;
+      width: 500px;
+      transform-style: preserve-3d;
+      position: absolute;
+      transform: rotateY(90deg) translateX(250px);
+    }
+
+    #maze {
+      perspective: 15000px;
+      transform-style: preserve-3d;
+      position: absolute;
+    }
+    #dummy {
+      position: absolute;
+      transform-style: preserve-3d;
+    }
+    #poopmeter {
+      font-size: 30pt;
+      color: white;
+      background: #2d1606;
+      position: absolute;
+      z-index: 2;
+
+      height: 50px;
+      width: 100%;
+    }
+    h1 {
+      top: -25px;
+      font-size: 30pt;
+      color: white;
+      position: absolute;
+      z-index: 3;
+      left: 45%;
+    }
+    #poopmeter::-webkit-progress-value {
+      font-size: 30pt;
+      color: white;
+      background: #2d1606;
+      position: absolute;
+      z-index: 2;
+      height: 50px;
+    }
+    #poopmeter::-moz-progress-value {
+      font-size: 30pt;
+      color: white;
+      background: #2d1606;
+      position: absolute;
+      z-index: 2;
+      height: 50px;
+    }
+  </style>
+
+  <body>
+    <h1>Poop Meter</h1>
+    <progress id="poopmeter" max="10" min="0" value="10"></progress>
+    <div id="dummy"></div>
+    <div id="maze">
+      <div class="toilet" hidden="true" id="toilet">
+        <div id="front"><img src="tile.png" /></div>
+        <div id="back"><img src="tile.png" /></div>
+        <div id="left"><img src="tile.png" /></div>
+        <div id="right"><img src="tile.png" /></div>
+      </div>
+    </div>
+    <script src="script.js?v=1"></script>
+  </body>
+</html>
