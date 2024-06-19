@@ -1,5 +1,5 @@
 
-this.coordinates = [
+var coordinates = [
   [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   [1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1],
   [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
@@ -68,12 +68,12 @@ class ray{
         this.drawWallSlice(i, wallHeight, sliceWidth);
     }
   }
-   castRay(rayAngle) {
+  castRay(rayAngle) {
     let x = this.player.x;
     let y = this.player.y;
     let dx = Math.cos(rayAngle);
     let dy = Math.sin(rayAngle);
-  
+
     // Increment x and y until we hit a wall
     let i = 0;
     while (this.map[Math.floor(y)][Math.floor(x)] === 0) {
@@ -82,11 +82,11 @@ class ray{
         i++;
         if (i > 400) break;  // Prevent infinite loops
     }
+
+    const distance = Math.sqrt((x - this.player.x) ** 2 + (y - this.player.y) ** 2);
+    const wallHeight = 300 / distance;
+
+    return { distance, wallHeight };
 }
 }
-
-  const distance = Math.sqrt((x - this.player.x) ** 2 + (y - this.player.y) ** 2);
-  const wallHeight = 300 / distance;
-
-  return { distance, wallHeight };
 
