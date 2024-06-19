@@ -95,7 +95,7 @@ var dmatrix, tmatrix;
 function isCollide(a, b) {
   dmatrix = new WebKitCSSMatrix(getComputedStyle(a).transform);
   tmatrix = new WebKitCSSMatrix(getComputedStyle(b).transform);
-  if (tmatrix.m41 ===(dmatrix.m41) && tmatrix.m43 === (dmatrix.m43)) {
+  if (tmatrix.m41 === dmatrix.m41 && tmatrix.m43 === dmatrix.m43) {
 		console.log(tmatrix.m41);
 		console.log(tmatrix.m43);
     return true;
@@ -150,28 +150,7 @@ document.addEventListener("keydown", (e) => {
     }
     if (trues != 0) 
 	{
-      a -= 50;
-      document.getElementById("dummy").style.transform =
-        "translate3d(" +
-        c +
-        "px, " +
-        y +
-        "px, " +
-        a +
-        "px) perspective(21000px) rotateY(" +
-        rotate +
-        "deg)";
-      document.getElementById("maze").style.transform =
-        "translate3d(" +
-        c +
-        "px, " +
-        y +
-        "px, " +
-        a +
-        "px) perspective(21000px) rotateY(" +
-        rotate +
-        "deg)";
-    
+    return;
     }
   } else if (e.key == "ArrowDown") {
     e.preventDefault();
@@ -205,27 +184,7 @@ a += 50
       }
     }
     if (trues != 0) {
-      a -= 50;
-      document.getElementById("dummy").style.transform =
-        "translate3d(" +
-        c +
-        "px, " +
-        y +
-        "px, " +
-        a +
-        "px) perspective(21000px) rotateY(" +
-        rotate +
-        "deg)";
-      document.getElementById("maze").style.transform =
-        "translate3d(" +
-        c +
-        "px, " +
-        y +
-        "px, " +
-        a +
-        "px) perspective(21000px) rotateY(" +
-        rotate +
-        "deg)";
+     return;
     }
   }
   if (e.key == "a") {
@@ -313,28 +272,7 @@ a += 50
       }
     }
     if (trues != 0) {
-      c += 500;
-      document.getElementById("dummy").style.transform =
-        "translate3d(" +
-        c +
-        "px, " +
-        y +
-        "px, " +
-        a +
-        "px) perspective(21000px) rotateY(" +
-        rotate +
-        "deg)";
-      document.getElementById("maze").style.transform =
-        "translate3d(" +
-        c +
-        "px, " +
-        y +
-        "px, " +
-        a +
-        "px) perspective(21000px) rotateY(" +
-        rotate +
-        "deg)";
-    
+      return;
     }
   } else if (e.key == "ArrowRight") {
     e.preventDefault();
@@ -369,28 +307,7 @@ a += 50
       }
     }
     if (trues != 0) {
-      c -= 500;
-      document.getElementById("dummy").style.transform =
-        "translate3d(" +
-        c +
-        "px, " +
-        y +
-        "px, " +
-        a +
-        "px) perspective(21000px) rotateY(" +
-        rotate +
-        "deg)";
-      document.getElementById("maze").style.transform =
-        "translate3d(" +
-        c +
-        "px, " +
-        y +
-        "px, " +
-        a +
-        "px) perspective(21000px) rotateY(" +
-        rotate +
-        "deg)";
-				
+     return;
     }
   }
   if (e.key == " ") {
