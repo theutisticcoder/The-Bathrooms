@@ -2,7 +2,7 @@ var toilet = document.getElementById("toilet");
 var place;
 
 var number;
-var maze = [
+var coordinates = [
   [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
   [1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1],
   [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
@@ -57,10 +57,10 @@ monster.style.width = "500px";
 monster.style.position = "absolute";
 monster.style.transformStyle = "preserve-3d";
 document.getElementById("maze").appendChild(monster);
-for (var x = 0; x < maze[0].length; x++) {
+for (var x = 0; x < coordinates[0].length; x++) {
 
-  for (var z = 0; z < maze.length; z++) {
-    if (maze[z][x] > 0) {
+  for (var z = 0; z < coordinates.length; z++) {
+    if (coordinates[z][x] > 0) {
       toilet = toilet.cloneNode(true);
       toilet.style.position = "absolute";
       toilet.style.height = "500px";
