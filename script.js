@@ -108,9 +108,9 @@ var t1 = 0;
 var c = 1500;
 var trues = 0;
 document.getElementById("dummy").style.transform =
-  "translate3d( " + c + "px, " + y + "px, " + a + "px) perspective("+(a * 2)+ "px)";
+  "translate3d( " + c + "px, " + y + "px, " + a + "px) perspective(21000px)";
 document.getElementById("maze").style.transform =
-  "translate3d(" + c + "px, " + y + "px, " + a + "px) perspective("+(a * 2)+ "px)";
+  "translate3d(" + c + "px, " + y + "px, " + a + "px) perspective(21000px)";
 var rotate = 0;
 var toilets = Array.from(document.getElementsByClassName("toilet"));
 document.addEventListener("keydown", (e) => {
@@ -128,7 +128,7 @@ document.addEventListener("keydown", (e) => {
       y +
       "px, " +
       a +
-      "px) perspective("+(a * 2)+ "px) rotateY(" +
+      "px) perspective(21000px) rotateY(" +
       rotate +
       "deg)";
     document.getElementById("maze").style.transform =
@@ -138,7 +138,7 @@ document.addEventListener("keydown", (e) => {
       y +
       "px, " +
       a +
-      "px) perspective("+(a * 2)+ "px) rotateY(" +
+      "px) perspective(21000px) rotateY(" +
       rotate +
       "deg)";
     for (var i = 0; i < toilets.length; i++) {
@@ -189,7 +189,7 @@ a -= 500
       y +
       "px, " +
       a +
-      "px) perspective("+(a * 2)+ "px) rotateY(" +
+      "px) perspective(21000px) rotateY(" +
       rotate +
       "deg)";
     document.getElementById("maze").style.transform =
@@ -199,7 +199,7 @@ a -= 500
       y +
       "px, " +
       a +
-      "px) perspective("+(a * 2)+ "px) rotateY(" +
+      "px) perspective(21000px) rotateY(" +
       rotate +
       "deg)";
     for (var i = 0; i < toilets.length; i++) {
@@ -248,7 +248,7 @@ a -= 500
       y +
       "px, " +
       a +
-      "px) perspective("+(a * 2)+ "px) rotateY(" +
+      "px) perspective(21000px) rotateY(" +
       rotate +
       "deg)";
     document.getElementById("maze").style.transform =
@@ -258,7 +258,7 @@ a -= 500
       y +
       "px, " +
       a +
-      "px) perspective("+(a * 2)+ "px) rotateY(" +
+      "px) perspective(21000px) rotateY(" +
       rotate +
       "deg)";
   }
@@ -274,7 +274,7 @@ a -= 500
       y +
       "px, " +
       a +
-      "px) perspective("+(a * 2)+ "px) rotateY(" +
+      "px) perspective(21000px) rotateY(" +
       rotate +
       "deg)";
     document.getElementById("maze").style.transform =
@@ -284,7 +284,7 @@ a -= 500
       y +
       "px, " +
       a +
-      "px) perspective("+(a * 2)+ "px) rotateY(" +
+      "px) perspective(21000px) rotateY(" +
       rotate +
       "deg)";
   
@@ -300,7 +300,7 @@ a -= 500
       y +
       "px, " +
       a +
-      "px) perspective("+(a * 2)+ "px) rotateY(" +
+      "px) perspective(21000px) rotateY(" +
       rotate +
       "deg)";
     document.getElementById("maze").style.transform =
@@ -310,7 +310,7 @@ a -= 500
       y +
       "px, " +
       a +
-      "px) perspective("+(a * 2)+ "px) rotateY(" +
+      "px) perspective(21000px) rotateY(" +
       rotate +
       "deg)";
     for (var i = 0; i < toilets.length; i++) {
@@ -360,7 +360,7 @@ a -= 500
       y +
       "px, " +
       a +
-      "px) perspective("+(a * 2)+ "px) rotateY(" +
+      "px) perspective(21000px) rotateY(" +
       rotate +
       "deg)";
     document.getElementById("maze").style.transform =
@@ -370,7 +370,7 @@ a -= 500
       y +
       "px, " +
       a +
-      "px) perspective("+(a * 2)+ "px) rotateY(" +
+      "px) perspective(21000px) rotateY(" +
       rotate +
       "deg)";
     for (var i = 0; i < toilets.length; i++) {
