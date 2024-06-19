@@ -118,7 +118,7 @@ document.addEventListener("keydown", (e) => {
   document.body.style.perspective = "5000px";
   if (e.key == "ArrowUp") {
     e.preventDefault();
-    a += 500;
+    a -= 50;
     document.getElementById("maze").transformOrigin =
       c + "px " + y + "px " + a + "px";
     document.getElementById("dummy").style.transform =
@@ -143,10 +143,14 @@ document.addEventListener("keydown", (e) => {
       "deg)";
     for (var i = 0; i < toilets.length; i++) {
       console.log(isCollide(document.getElementById("dummy"), toilets[i]));
+
+      if (isCollide(document.getElementById("dummy"), toilets[i]) == true) {
+        trues++;
+      }
     }
     if (trues != 0) 
 	{
-      a -= 500;
+      a -= 50;
       document.getElementById("dummy").style.transform =
         "translate3d(" +
         c +
@@ -171,7 +175,7 @@ document.addEventListener("keydown", (e) => {
     }
   } else if (e.key == "ArrowDown") {
     e.preventDefault();
-a -= 500
+a += 50
     document.getElementById("maze").transformOrigin =
       c + "px " + y + "px " + a + "px";
     document.getElementById("dummy").style.transform =
@@ -195,10 +199,13 @@ a -= 500
       rotate +
       "deg)";
     for (var i = 0; i < toilets.length; i++) {
-      console.log(isCollide(document.getElementById("dummy"), toilets[i]))
+      console.log(isCollide(document.getElementById("dummy"), toilets[i]));
+      if (isCollide(document.getElementById("dummy"), toilets[i]) == true) {
+        trues++;
+      }
     }
     if (trues != 0) {
-      a += 500;
+      a -= 50;
       document.getElementById("dummy").style.transform =
         "translate3d(" +
         c +
@@ -275,7 +282,7 @@ a -= 500
   
   } else if (e.key == "ArrowLeft") {
     e.preventDefault();
-    c -= 500;
+    c += 50;
     document.getElementById("maze").transformOrigin =
       c + "px " + y + "px " + a + "px";
     document.getElementById("dummy").style.transform =
@@ -300,6 +307,10 @@ a -= 500
       "deg)";
     for (var i = 0; i < toilets.length; i++) {
       console.log(isCollide(document.getElementById("dummy"), toilets[i]));
+
+      if (isCollide(document.getElementById("dummy"), toilets[i]) == true) {
+        trues++;
+      }
     }
     if (trues != 0) {
       c += 500;
@@ -327,7 +338,7 @@ a -= 500
     }
   } else if (e.key == "ArrowRight") {
     e.preventDefault();
-    c += 500
+    c -= 50
     document.getElementById("maze").transformOrigin =
       c + "px " + y + "px " + a + "px";
     document.getElementById("dummy").style.transform =
@@ -352,6 +363,10 @@ a -= 500
       "deg)";
     for (var i = 0; i < toilets.length; i++) {
       console.log(isCollide(document.getElementById("dummy"), toilets[i]));
+
+      if (isCollide(document.getElementById("dummy"), toilets[i]) == true) {
+        trues++;
+      }
     }
     if (trues != 0) {
       c -= 500;
