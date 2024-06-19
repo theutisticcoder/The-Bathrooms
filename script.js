@@ -95,7 +95,7 @@ var dmatrix, tmatrix;
 function isCollide(a, b) {
   dmatrix = new WebKitCSSMatrix(getComputedStyle(a).transform);
   tmatrix = new WebKitCSSMatrix(getComputedStyle(b).transform);
-  if (tmatrix.m41 === dmatrix.m41 && tmatrix.m43 === dmatrix.m43) {
+  if (tmatrix.m41 >= dmatrix.m41 && tmatrix.m41 >= (dmatrix.m41 + 500) && tmatrix.m43 >= dmatrix.m43 && tmatrix.m43 >= (dmatrix.m43 + 500)) {
 		console.log(tmatrix.m41);
 		console.log(tmatrix.m43);
     return true;
