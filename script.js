@@ -46,7 +46,7 @@ var coordinates = [
   [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1],
   [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1],
   [1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1],
-  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 ];
 
 var monster = document.createElement("img");
@@ -70,7 +70,7 @@ for (var x = 0; x < coordinates[0].length; x++) {
       toilet.style.transformOrigin = "0px 0px 0px";
       toilet.style.perspective = "6000px";
       toilet.style.transform =
-        "translate3d(" + (x * 500) + "px, 0px, " + (z * 500) + "px)";
+        "translate3d(" + (x * 500) + "px, 0px, " + (z * -500) + "px)";
       document.getElementById("maze").appendChild(toilet);
     }
   }
@@ -108,9 +108,9 @@ var t1 = 0;
 var c = 1500;
 var trues = 0;
 document.getElementById("dummy").style.transform =
-  "translate3d( " + c + "px, " + y + "px, " + a + "px) perspective(21000px)";
+  "translate3d( " + c + "px, " + y + "px, " + a + "px)";
 document.getElementById("maze").style.transform =
-  "translate3d(" + c + "px, " + y + "px, " + a + "px) perspective(21000px)";
+  "translate3d(" + c + "px, " + y + "px, " + a + "px)";
 var rotate = 0;
 var toilets = Array.from(document.getElementsByClassName("toilet"));
 document.addEventListener("keydown", (e) => {
@@ -128,7 +128,7 @@ document.addEventListener("keydown", (e) => {
       y +
       "px, " +
       a +
-      "px) perspective(21000px) rotateY(" +
+      "px) rotateY(" +
       rotate +
       "deg)";
     document.getElementById("maze").style.transform =
@@ -138,7 +138,7 @@ document.addEventListener("keydown", (e) => {
       y +
       "px, " +
       a +
-      "px) perspective(21000px) rotateY(" +
+      "px) rotateY(" +
       rotate +
       "deg)";
     for (var i = 0; i < toilets.length; i++) {
@@ -164,7 +164,7 @@ a += 50
       y +
       "px, " +
       a +
-      "px) perspective(21000px) rotateY(" +
+      "px) rotateY(" +
       rotate +
       "deg)";
     document.getElementById("maze").style.transform =
@@ -174,7 +174,7 @@ a += 50
       y +
       "px, " +
       a +
-      "px) perspective(21000px) rotateY(" +
+      "px) rotateY(" +
       rotate +
       "deg)";
     for (var i = 0; i < toilets.length; i++) {
@@ -199,7 +199,7 @@ a += 50
       y +
       "px, " +
       a +
-      "px) perspective(21000px) rotateY(" +
+      "px) rotateY(" +
       rotate +
       "deg)";
     document.getElementById("maze").style.transform =
@@ -209,7 +209,7 @@ a += 50
       y +
       "px, " +
       a +
-      "px) perspective(21000px) rotateY(" +
+      "px) rotateY(" +
       rotate +
       "deg)";
   }
@@ -225,7 +225,7 @@ a += 50
       y +
       "px, " +
       a +
-      "px) perspective(21000px) rotateY(" +
+      "px) rotateY(" +
       rotate +
       "deg)";
     document.getElementById("maze").style.transform =
@@ -235,7 +235,7 @@ a += 50
       y +
       "px, " +
       a +
-      "px) perspective(21000px) rotateY(" +
+      "px) rotateY(" +
       rotate +
       "deg)";
   
@@ -251,7 +251,7 @@ a += 50
       y +
       "px, " +
       a +
-      "px) perspective(21000px) rotateY(" +
+      "px) rotateY(" +
       rotate +
       "deg)";
     document.getElementById("maze").style.transform =
@@ -261,7 +261,7 @@ a += 50
       y +
       "px, " +
       a +
-      "px) perspective(21000px) rotateY(" +
+      "px) rotateY(" +
       rotate +
       "deg)";
     for (var i = 0; i < toilets.length; i++) {
@@ -286,7 +286,7 @@ a += 50
       y +
       "px, " +
       a +
-      "px) perspective(21000px) rotateY(" +
+      "px) rotateY(" +
       rotate +
       "deg)";
     document.getElementById("maze").style.transform =
@@ -296,7 +296,7 @@ a += 50
       y +
       "px, " +
       a +
-      "px) perspective(21000px) rotateY(" +
+      "px) rotateY(" +
       rotate +
       "deg)";
     for (var i = 0; i < toilets.length; i++) {
