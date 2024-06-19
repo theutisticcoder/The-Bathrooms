@@ -1,5 +1,8 @@
 
+var image = new Image();
+image.src = "tile.png";
 class script{
+
   constructor(){
     this.canvas = document.querySelector("canvas");
     document.querySelector("canvas").tabIndex = 0;
@@ -76,7 +79,7 @@ class script{
     for (let j = 0; j < wallHeight; j++) {
         let yPosition = Math.floor(300 - wallHeight / 2 + j);
         this.ctx.fillStyle = `rgb(180, 0, 180)`;
-        this.ctx.drawImage("tile.png", i * sliceWidth, yPosition, sliceWidth, 1);
+        this.ctx.drawImage(image, i * sliceWidth, yPosition, sliceWidth, 1);
     }
   }
    raycast() {
