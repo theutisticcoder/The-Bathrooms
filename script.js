@@ -158,9 +158,7 @@ document.addEventListener("keydown", (e) => {
         y +
         "px, " +
         a +
-        "px) perspective(" +
-        (a * 2) +
-        "px) rotateY(" +
+        "px) perspective(21000px) rotateY(" +
         rotate +
         "deg)";
       document.getElementById("maze").style.transform =
@@ -170,9 +168,7 @@ document.addEventListener("keydown", (e) => {
         y +
         "px, " +
         a +
-        "px) perspective(" +
-        (a * 2) +
-        "px) rotateY(" +
+        "px) perspective(21000px) rotateY(" +
         rotate +
         "deg)";
     
@@ -217,9 +213,7 @@ a -= 500
         y +
         "px, " +
         a +
-        "px) perspective(" +
-        (a * 2) +
-        "px) rotateY(" +
+        "px) perspective(21000px) rotateY(" +
         rotate +
         "deg)";
       document.getElementById("maze").style.transform =
@@ -229,9 +223,7 @@ a -= 500
         y +
         "px, " +
         a +
-        "px) perspective(" +
-        (a * 2) +
-        "px) rotateY(" +
+        "px) perspective(21000px) rotateY(" +
         rotate +
         "deg)";
     }
@@ -329,9 +321,7 @@ a -= 500
         y +
         "px, " +
         a +
-        "px) perspective(" +
-        (a * 2) +
-        "px) rotateY(" +
+        "px) perspective(21000px) rotateY(" +
         rotate +
         "deg)";
       document.getElementById("maze").style.transform =
@@ -341,9 +331,7 @@ a -= 500
         y +
         "px, " +
         a +
-        "px) perspective(" +
-        (a * 2) +
-        "px) rotateY(" +
+        "px) perspective(21000px) rotateY(" +
         rotate +
         "deg)";
     
@@ -389,9 +377,7 @@ a -= 500
         y +
         "px, " +
         a +
-        "px) perspective(" +
-        (a * 2) +
-        "px) rotateY(" +
+        "px) perspective(21000px) rotateY(" +
         rotate +
         "deg)";
       document.getElementById("maze").style.transform =
@@ -401,9 +387,7 @@ a -= 500
         y +
         "px, " +
         a +
-        "px) perspective(" +
-        (a * 2) +
-        "px) rotateY(" +
+        "px) perspective(21000px) rotateY(" +
         rotate +
         "deg)";
 				
