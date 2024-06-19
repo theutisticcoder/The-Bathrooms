@@ -143,10 +143,6 @@ document.addEventListener("keydown", (e) => {
       "deg)";
     for (var i = 0; i < toilets.length; i++) {
       console.log(isCollide(document.getElementById("dummy"), toilets[i]));
-
-      if (isCollide(document.getElementById("dummy"), toilets[i]) == true) {
-        trues++;
-      }
     }
     if (trues != 0) 
 	{
@@ -199,10 +195,7 @@ a -= 500
       rotate +
       "deg)";
     for (var i = 0; i < toilets.length; i++) {
-      console.log(isCollide(document.getElementById("dummy"), toilets[i]));
-      if (isCollide(document.getElementById("dummy"), toilets[i]) == true) {
-        trues++;
-      }
+      console.log(isCollide(document.getElementById("dummy"), toilets[i]))
     }
     if (trues != 0) {
       a += 500;
@@ -307,10 +300,6 @@ a -= 500
       "deg)";
     for (var i = 0; i < toilets.length; i++) {
       console.log(isCollide(document.getElementById("dummy"), toilets[i]));
-
-      if (isCollide(document.getElementById("dummy"), toilets[i]) == true) {
-        trues++;
-      }
     }
     if (trues != 0) {
       c += 500;
@@ -363,10 +352,6 @@ a -= 500
       "deg)";
     for (var i = 0; i < toilets.length; i++) {
       console.log(isCollide(document.getElementById("dummy"), toilets[i]));
-
-      if (isCollide(document.getElementById("dummy"), toilets[i]) == true) {
-        trues++;
-      }
     }
     if (trues != 0) {
       c -= 500;
